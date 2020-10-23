@@ -41,7 +41,7 @@ function draw()
 function c(bullet1,wall1)
 {
 
-bulletRightEdge=bullet1.x+bullet1.width;
+bulletRightEdge=bullet.x+bullet.width;
 wallLeft=wall1.x;
 if(bulletRightEdge<=wallLeftEdge)
    {
