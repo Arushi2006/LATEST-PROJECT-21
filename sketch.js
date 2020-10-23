@@ -11,7 +11,7 @@ function setup()
     bullet.shapeColor="white";
     bullet.velocityX=speed;
     wall=createSprite(1200,200,thickness,200);
-    wall.shapeColor=grey(80,80,80);
+    wall.shapeColor=rgb(80,80,80);
 }
 
 function draw()
@@ -19,6 +19,23 @@ function draw()
     background(0);
     drawSprites;
     c();
+    if(c(bullet,wall))
+    {if(c(bullet,wall))
+{
+  bullet.velocityX=0;
+  var damage=0.5*32*223*223/70*70*70;
+
+  if(damage>10)
+  {
+    wall.shapeColor=red(225,0,0);
+  }
+   if(damage<10)
+   {
+      wall.shapeColor=green(0,225,0);
+   }
+}
+    }
+        
 }
 
 function c(bullet1,wall1)
@@ -34,18 +51,5 @@ if(bulletRightEdge<=wallLeftEdge)
    }  
        return false;
   
-if(c(bullet,wall))
-{
-  bullet.velocityX=0;
-  var damage=0.5*32*223*223/70*70*70;
 
-  if(damage>10)
-  {
-    wall.shapeColor=red(225,0,0);
-  }
-   if(damage<10)
-   {
-      wall.shapeColor=green(0,225,0);
-   }
-}
 }
