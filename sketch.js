@@ -43,7 +43,7 @@ function c(bullet1,wall1)
 
 bulletRightEdge=bullet1.x+bullet1.width;
 wallLeft=wall1.x;
-if(bulletRightEdge>=wallLeftEdge)
+if(bulletRightEdge<=wallLeftEdge)
    {
       return true
    }  
