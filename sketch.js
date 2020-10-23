@@ -40,12 +40,10 @@ function draw()
 
 function c(bullet1,wall1)
 {
-  Mouse.y=bullet.y;
-  Mouse.x=bullet.x;
 
 bulletRightEdge=bullet1.x+bullet1.width;
 wallLeft=wall1.x;
-if(bulletRightEdge<=wallLeftEdge)
+if(bulletRightEdge>=wallLeftEdge)
    {
       return true
    }  
